@@ -40,8 +40,9 @@ class linklist:
     def delete_in_position(self,position):
         temp = self.head
         if position == 1:
-            temp = temp.next
-            self.head = temp
+            prev = temp.next
+            temp.next = None
+            self.head = prev
         else:
             count = 1
             while(temp.next != None):
@@ -51,6 +52,13 @@ class linklist:
                 count+=1
             temp.next = temp.next.next 
 
+    def find_length(self):
+        templist = self.head
+        counter = 0
+        while(templist):
+            counter+=1
+            templist = templist.next
+        print(counter)
 
 
     def print_list(self):
@@ -69,8 +77,9 @@ if __name__ == "__main__":
     
     print('------')
 
-    linklist.delete_in_position(5)
-    linklist.print_list()
+    print('length of Linklist '+linklist.find_length())
+    # linklist.delete_in_position(1)
+    # linklist.print_list()
     # linklist.deleteNode(5)
     # linklist.print_list()
 
