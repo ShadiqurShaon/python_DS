@@ -32,12 +32,22 @@ class linklist:
             if(fast_list.data == slow_list.data):
                 flag = 1
                 break
-            fast_list = fast_list.next
-            slow_list = slow_list.next.next
+            fast_list = fast_list.next.next
+            slow_list = slow_list.next
         if flag==1:
             print('found')
+            length = 1
+            brake_point = slow_list
+            slow_list = slow_list.next
+            while(slow_list.next!=None):
+                if (slow_list.data ==brake_point.data):
+                    break
+                length+=1
+                slow_list = slow_list.next
+            print(length)
         else:
             print('not found')
+        
 
     def print(self):
         temp = self.head
@@ -52,7 +62,7 @@ if __name__=="__main__":
     linklist.additem(3)
     linklist.additem(2)
     linklist.additem(1)
-    # linklist.create_loop(2)
+    linklist.create_loop(2)
     linklist.cycle_detection()
     # linklist.print()
         
