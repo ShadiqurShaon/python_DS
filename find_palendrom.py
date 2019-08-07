@@ -33,22 +33,14 @@ class Link_list:
         return "palendrom"
 
     def remove_duplicate(self):
-        newNode = None
-        list1 = self.head
-        list2 = list1.next
-        while(list2 and list1.next):
-            if list1.data != list2.data:
-                prev = list1.next
-                list1.next = newNode
-                newNode = list1
-                list1 = prev
-                list2 = list2.next
+        current = self.head
+        while(current.next != None):
+            if current.data == current.next.data:
+                current.next = current.next.next
+                # current = current.next
             else:
-                list1 = list1.next
-                list2 = list2.next
-        list1.next = newNode
-        newNode = list1
-        self.head = newNode
+                current = current.next
+
 
 if __name__ == "__main__":
     llist = Link_list()
