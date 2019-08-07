@@ -21,29 +21,48 @@ class Link_list:
     def find_palendrom(self):
         current  = self.head
         stack = []
-        
         while(current):
             stack.append(current.data)
             current = current.next
-
         current2 = self.head
+
         while(current2):
             if current2.data != stack.pop():
                 return "not palendrom"
             current2 = current2.next
         return "palendrom"
-    
+
+    def remove_duplicate(self):
+        newNode = None
+        list1 = self.head
+        list2 = list1.next
+        while(list2 and list1.next):
+            if list1.data != list2.data:
+                prev = list1.next
+                list1.next = newNode
+                newNode = list1
+                list1 = prev
+                list2 = list2.next
+            else:
+                list1 = list1.next
+                list2 = list2.next
+        list1.next = newNode
+        newNode = list1
+        self.head = newNode
+
 if __name__ == "__main__":
     llist = Link_list()
-    llist.insert(3)
-    llist.insert(2)
     llist.insert(1)
+    llist.insert(1)
+    llist.insert(2)
     llist.insert(2)
     llist.insert(3)
 
     llist.print_list()
 
-    print(llist.find_palendrom())
+    print("-------")
+    llist.remove_duplicate()
+    llist.print_list()
 
     
             
