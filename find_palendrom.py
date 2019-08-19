@@ -49,6 +49,7 @@ if __name__ == "__main__":
     llist.insert(2)
     llist.insert(2)
     llist.insert(3)
+    llist.insert(3)
 
     llist.print_list()
 
