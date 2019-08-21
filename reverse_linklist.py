@@ -11,6 +11,15 @@ class Linklist:
     new_node.next = self.head
     self.head = new_node
 
+  def head_to_tell(self):
+    temp = self.head
+    while(temp.next.next != None):
+      temp = temp.next
+    pt = temp.next
+    temp.next = None
+    pt.next = self.head
+    self.head = pt
+
   def revarce(self):
     temp = self.head
     new = None
@@ -34,6 +43,9 @@ if __name__ == "__main__":
     linklist.insert(3)
     linklist.insert(2)
     linklist.insert(1)
+    # linklist.insert(10)
     # linklist.printList()
-    linklist.revarce()
+    # linklist.revarce()
+    # linklist.printList()
+    linklist.head_to_tell()
     linklist.printList()
