@@ -21,6 +21,9 @@ class linklist:
             temp = temp.next
     
     def find_nth_from_last(self,position):
+
+        if position<1:
+            return 
         first = self.head
         second = self.head
         for i in range(1,position+1):
@@ -42,4 +45,4 @@ if __name__ == "__main__":
     link.insert(1)
     link.print_list()
     print("n_th node from last:")
-    link.find_nth_from_last(1)
+    link.find_nth_from_last(0)
