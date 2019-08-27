@@ -33,7 +33,7 @@ class linklist:
 
 
 if __name__ == "__main__":
-
+    print('orginal list')
     link = linklist()
     link.insert(5)
     link.insert(4)
@@ -41,5 +41,5 @@ if __name__ == "__main__":
     link.insert(2)
     link.insert(1)
     link.print_list()
-    print("-------")
-    link.find_nth_from_last(3)
+    print("n_th node from last:")
+    link.find_nth_from_last(1)
