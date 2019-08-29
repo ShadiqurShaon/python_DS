@@ -41,3 +41,4 @@ def find_pivot(arr,low,high):
 array = [5,6,7,8,9,10,1,2,3]
 print(find_element(array,8,0,8))
 
+
