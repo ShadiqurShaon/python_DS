@@ -1,4 +1,4 @@
-def lengthOfLongestSubstring(self, s: str) -> int:
+def lengthOfLongestSubstring(s):
         
         dic = {}
         result = []
@@ -10,15 +10,9 @@ def lengthOfLongestSubstring(self, s: str) -> int:
                 result.append(item)
             else:
                 for idx, val in enumerate(result):
-                    print(val)
-                    
-                    if val != item:
-                        del result[idx]
-                        
-                    else:
-                        del result[idx]
-                        break
-                        
+                    if val == item:
+                        del result[0:idx+1]
+                        break        
                 result.append(item)
                     
             if(len(result)>final):
@@ -26,5 +20,8 @@ def lengthOfLongestSubstring(self, s: str) -> int:
                 final = len(result)
             
             print(result)
-            print(len(result))
+            # print(len(result))
         return final
+
+print(lengthOfLongestSubstring('abacdcd'))
+# print(lengthOfLongestSubstring('abcabcbcbb'))
