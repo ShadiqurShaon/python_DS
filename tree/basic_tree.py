@@ -51,11 +51,12 @@ class Tree:
 
 if __name__ == "__main__":
     tree = Tree()
-    tree.push_tree(1)
-    tree.push_tree(2)
-    tree.push_tree(3)
-    tree.push_tree(4)
-    tree.push_tree(5)
+    tree.push_tree(10)
+    tree.push_tree(11)
+    tree.push_tree(9)
+    tree.push_tree(7)
+    tree.push_tree(15)
+    tree.push_tree(8)
 
     tree.print_tree()
     tree.print_hudai()
