@@ -18,17 +18,22 @@ class Linkllist:
             temp = temp.next
 
     def pare_wise_swap(self):
-        temp = self.head
-        prev = None
-        while(temp):
-            n2 = temp.next
-            temp.next = temp.next.next
-            n2.next = temp
-            temp = n2
-            n2.next = prev
-            prev = n2
+        
+        dummy = Node(0)
+        dummy.next = self.head
+        temp = dummy
+        while(temp.next and temp.next.next):
+            first = temp.next
+            sec = temp.next.next
+            temp.next = sec
+            first.next = sec.next
+            sec.next = first
             temp = temp.next.next
-        self.head = prev
+        self.head = dummy.next
+
+
+
+        
         # return temp
 
 if __name__ == "__main__":

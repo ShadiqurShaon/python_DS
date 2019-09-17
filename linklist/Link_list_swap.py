@@ -22,29 +22,31 @@ class Linklist:
       print(temp.data)
       temp = temp.next
 
-  def swap(self):
-    temp = None
-    curr = self.head
-    while(curr.next.next!= None):
-      node1 = curr
-      node2 = curr.next
-      node1.next = None
-      node2.next = node1
-      
-      # node1 = node2
-      temp = node2
-      
-      curr = curr.next
-    self.head = temp
+  def swap(self,x,y):
+  
+    if x==y:
+      return 
+    prevx = None
+    currx = self.head
+    while(currx.data != x and currx != None):
+      prevx = currx
+      currx = currx.next
+    prevy = None
+    curry = self.head
+    while(curry.data != y and curry != None):
+      prevy = curry
+      curry = curry.next
+
+    
 
 llist = Linklist()
-llist.head = llist.insert_data(14)
-llist.head.next = llist.insert_data(20)
-llist.head.next.next = llist.insert_data(13)
-llist.head.next.next.next = llist.insert_data(12)
-llist.head.next.next.next.next = llist.insert_data(15)
-llist.head.next.next.next.next.next = llist.insert_data(10)
+llist.head = llist.insert_data(1)
+llist.head.next = llist.insert_data(2)
+llist.head.next.next = llist.insert_data(3)
+llist.head.next.next.next = llist.insert_data(4)
+llist.head.next.next.next.next = llist.insert_data(5)
+llist.head.next.next.next.next.next = llist.insert_data(6)
 llist.print_list()
 print("----------")
-llist.swap()
+llist.swap(2,6)
 llist.print_list()
