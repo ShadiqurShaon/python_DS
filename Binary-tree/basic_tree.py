@@ -19,7 +19,7 @@ class Tree:
         stack.append(tr.left)
       elif tr.right != None:
         stack.append(tr.right)
-      elif tr.left == None:
+      if tr.left == None:
         tr.left = Node(12)
         break
       elif tr.right== None:
@@ -47,6 +47,7 @@ root.left.left = Node(7)
 root.right.left = Node(15)
 root.right.right = Node(8)
 tree = Tree()
+tree.print_tree(root)
 root2 = tree.incert_tree(root)
 tree.print_tree(root2)
 # tree.print_tree(root)
