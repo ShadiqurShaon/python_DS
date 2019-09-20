@@ -23,40 +23,25 @@ class Linklist:
       temp = temp.next
 
   def swap(self,x,y):
-<<<<<<< HEAD
-    if x==y:
-      return
-    prevx= None
-    currx= self.head
-    while(currx.data != x and currx):
-=======
   
     if x==y:
       return 
     prevx = None
     currx = self.head
-    while(currx.data != x and currx != None):
->>>>>>> 19c33419ca112cf9051760794c182a238ad12d3d
-      prevx = currx
-      currx = currx.next
-    prevy = None
-    curry = self.head
-<<<<<<< HEAD
+
+
     while(curry.data != y and curry):
       prevy = curry
       curry = curry.next
     prevx.next = curry
     prevy.next = currx
     temp = curry.next
-    curry.next = currx.next
+    curry.next = currx.nex
     currx.next = temp
-=======
-    while(curry.data != y and curry != None):
-      prevy = curry
-      curry = curry.next
+
 
     
->>>>>>> 19c33419ca112cf9051760794c182a238ad12d3d
+
 
 
  
