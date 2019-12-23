@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+def find(m_str,strat):
+
+    if m_str[]
+=======
 def find(str_main,sub_str,start):
   if start==len(str_main):
     return 1 
@@ -15,3 +20,4 @@ def find(str_main,sub_str,start):
 
 find('aaaabaaaa','a',0)
 
+>>>>>>> f4e05676db09820310fbdebac2c20d6c3b8b394d
