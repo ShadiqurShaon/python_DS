@@ -1,11 +1,11 @@
 def jump(arr,index):
-  if index>=len(arr):
-    return True
-  elif arr[index]==0:
-    return False
-  else:
-    if index==0:
-      return jump(arr,arr[0])
-    else:
-      return jump(arr,index+arr[index])
-print(jump( [2,0,1],0))
+  m=0
+  for index,item in enumerate(arr):
+    if(index>m):
+      return False
+    if item+index>m:
+      m=item+index
+  return True
+    
+  
+print(jump( [2,2,0,1,1],0))
