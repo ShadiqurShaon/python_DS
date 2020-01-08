@@ -19,7 +19,8 @@ def subarray(arr,sum):
 
         if last_sum==0:
             break
-        if last_sum!=0 and index==len(arr)
+        if last_sum!=0 and index==len(arr):
+            return -1
     print(re)
         
 
