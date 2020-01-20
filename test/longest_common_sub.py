@@ -7,17 +7,17 @@
 #       return max(lcs(str1,str2,m-1,n),lcs(str1,str2,m,n-1))
 
 # print(lcs('aab','azb',3,3))
-
-def alllcs(str1,str2,m,n,tempre,result):
+result = []
+def alllcs(str1,str2,m,n,tempre):
    if m==0 or n==0:
-      result.append(tempre)
-      # tempre = []
-      return
+         return []
    elif str1[m-1]==str2[n-1]:
-      # tempre.append(str1[m-1])
-      return alllcs(str1,str2,m-1,n-1,tempre+[str1[m-1]],result)
-   else:
-      return alllcs(str1,str2,m-1,n,tempre,result) or  alllcs(str1,str2,m,n-1,tempre,result)
+      # tempre.append()
+      return [str1[m-1]]+alllcs(str1,str2,m-1,n-1,tempre)
+   else :
+      return [alllcs(str1,str2,m-1,n,tempre),alllcs(str1,str2,m,n-1,tempre)]
+      
   
-   return result
-print(alllcs('abc','bac',3,3,[],[]))
+
+print(alllcs('abc','bac',3,3,[]))
+print(result)
