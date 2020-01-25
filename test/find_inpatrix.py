@@ -1,6 +1,6 @@
 def matrix(matrix,target):
     col_min = 0
-    col_max = len(matrix)
+    col_max = len(matrix)-1
     find_col = 0
     if len(matrix)>1:
         while(1):
@@ -27,8 +27,8 @@ def matrix(matrix,target):
     else:
         find_col = 0
     min=0
-    max = len(matrix[find_col])
-    while(min<max):
+    max = len(matrix[find_col])-1
+    while(min<=max):
         mid = (min+max)//2
         if matrix[find_col][mid]==target:
             return True
@@ -49,14 +49,13 @@ def matrix(matrix,target):
     #         break
     # for item in matrix[col]:
     #     if item==s_item:
+
     #         return "Found"
 
     # return "Not Found"
 
 print(matrix([
-  [2,   3,  5,  7],
-  [12,   13,  15,  17],
-  [22,   23,  25,  27],
-  [32,   33,  35,  37]
+  [2],[3]
+ 
  
 ],1))

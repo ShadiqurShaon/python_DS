@@ -13,6 +13,21 @@ class Bst:
             root.left = self.insert(root.left,data)
         else:
             root.right = self.insert(root.right,data)
+<<<<<<< HEAD
+        
+        root.height = 1+max(self.get_height(root.left),self.get_height(root.right))
+
+        balace = self.getbalance(root)
+
+        if balace>1 and key>root.right.data:
+            
+
+        return root
+    def getbalance(self,root):
+        if not root:
+            return 0
+        return self.get_height(root.left)-self.get_height(root.right)
+=======
 
         root.height = 1+max(self.get_height(root.left),self.get_height(root.right))
         balance = self.get_balance(root)
@@ -34,16 +49,22 @@ class Bst:
             return self.left_rotate(root)
 
         return root
+>>>>>>> e33fdb65101c3798334b2412221d517a22d6b274
     def get_height(self,root):
         if not root:
             return 0
         return root.height
 
+<<<<<<< HEAD
+=======
     def get_balance(self,root):
         if not root:
             return 0
         return self.get_height(root.left)-self.get_height(root.right)
+>>>>>>> e33fdb65101c3798334b2412221d517a22d6b274
 
+
+        
     def print_tree(self,root):
         if not root:
             return
@@ -77,7 +98,10 @@ class Bst:
 
 
 bst = Bst()
+<<<<<<< HEAD
+=======
 root = None
+>>>>>>> e33fdb65101c3798334b2412221d517a22d6b274
 root = bst.insert(root,10)
 root = bst.insert(root,20)
 root = bst.insert(root,30)
@@ -85,7 +109,12 @@ root = bst.insert(root,40)
 root = bst.insert(root,50)
 root = bst.insert(root,25)
 # root = bst.insert(root,35)
+<<<<<<< HEAD
+# newroot = root.right
+# rotate_root = bst.rotate(newroot)
+=======
 
+>>>>>>> e33fdb65101c3798334b2412221d517a22d6b274
 bst.print_tree(root)
         
 
