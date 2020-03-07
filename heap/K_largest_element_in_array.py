@@ -9,13 +9,13 @@ def makeMinhippy(arr,n,i):
     if root!=i:
         arr[i],arr[root] = arr[root],arr[i]
         makeMinhippy(arr,n,root)
-arr = [1, 23, 12, 9, 30, 2, 50]
+arr = [1, 23, 12, 9, 30, 2, 8]
 n = len(arr)
 for i in range(n,-1,-1):
     makeMinhippy(arr,n,i)
 print(arr)
-for i in range(0,3):
-    # arr[0],arr[i] = arr[i],arr[0]
-    print(arr.pop(0))
-    makeMinhippy(arr,n-i,0)
-print(arr)
+# for i in range(0,3):
+#     # arr[0],arr[i] = arr[i],arr[0]
+#     print(arr.pop(0))
+#     makeMinhippy(arr,n-i,0)
+# print(arr)

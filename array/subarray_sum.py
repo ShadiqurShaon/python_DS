@@ -24,5 +24,5 @@ def subarray(arr,sum):
     print(re)
         
 
-subarray([1 ,2 ,3 ,8 ,5],12)
+subarray([1 ,2 ,3 ,8 ,5],11)
             
